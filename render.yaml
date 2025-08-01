@@ -1,10 +1,8 @@
 services:
   - type: web
     name: budget-bot
-    runtime: python
+    env: python
+    plan: free
     buildCommand: ""
     startCommand: python bot.py
-    envVars:
-      - key: GOOGLE_APPLICATION_CREDENTIALS
-        value: credentials.json
-    pythonVersion: 3.10
+    autoDeploy: true
